@@ -1,0 +1,44 @@
+@import '../../variables.css';
+
+/* user box */
+.cs-con-user-box{
+    width: 100%;
+    display: flex;
+    background-color: var(--white);
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.cs-con-avatar-name{
+    flex: 1;
+    display: flex;
+}
+
+.cs-img-avatar{
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+}
+
+.cs-username{
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    color: var(--dark-green);
+}
+
+
+.circle-off-online{
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+}
+
+.cs-online{
+    background-color: var(--light-green);
+}
+
+.cs-offline{
+    background-color: #ed2939;
+}

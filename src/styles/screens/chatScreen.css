@@ -1,0 +1,54 @@
+
+@import '../../variables.css';
+
+.cs-main-container{
+    display: flex;
+    position: relative;
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .cs-con-chat-side{
+        width: 100%;
+        height: 90vh;
+        background-color: #129846;
+        overflow-y: scroll;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .move-to-users{
+        animation-name: movetToUsers;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-direction: reverse;
+    }
+
+    .move-to-chat{
+        animation-name: movetToChat;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes movetToUsers {
+        0%   {
+            transform: translateX(0vw);
+        }
+        100%   {
+            transform: translateX(-100vw);
+        }
+    }
+
+    @keyframes movetToChat {
+        100%   {
+            transform: translateX(-100vw);
+        }
+    }
+}

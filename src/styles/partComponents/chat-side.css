@@ -1,0 +1,107 @@
+
+@import '../../variables.css';
+
+/* chat side */
+
+.cs-con-chat-side{
+    width: 65%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white-gray);
+}
+
+.cs-con-messages{
+    background-color: var(--white-gray);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.cs-con-whole-message{
+    max-width: 70%;
+    margin: 1rem .5rem;
+}
+
+.cs-msg-left{
+    align-self: flex-start;
+}
+
+.cs-msg-right{
+    align-self: flex-end;
+}
+
+.cs-con-write-message{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.cs-input-message{
+    flex: 1;
+    height: 100%;
+    font-size: 1.8rem;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    color: var(--dark-green);
+}
+
+.cs-btn-send{
+    background-color: var(--dark-green);
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+@media (max-width: 600px) {
+    .cs-con-chat-side{
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+
+    .cs-con-whole-message{
+        max-width: 90%;
+        margin: 1rem 0;
+    }
+
+    .move2Left{
+        animation-name: movetToLeft;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    .move2Right{
+        animation-name: movetToLeft;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-direction: reverse;
+    }
+
+    @keyframes movetToLeft {
+        0%   {
+            transform: translateX(0vw);
+        }
+        100%   {
+            transform: translateX(-100vw);
+        }
+    }
+
+    @keyframes movetToRight {
+        100%   {
+            transform: translateX(-100vw);
+        }
+    }
+}

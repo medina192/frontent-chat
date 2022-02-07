@@ -1,0 +1,26 @@
+
+@import '../../variables.css';
+
+.cs-con-message{
+    background-color: var(--blue-green);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: .5rem;
+}
+
+.cs-con-message-mine{
+    background-color: var(--light-green);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: .5rem;
+}
+
+.cs-text-message{
+    font-size: 1.4rem;
+    color: white;
+}
+
+.cs-date-msg{
+    font-size: 1.2rem;
+    font-weight: 300;
+}

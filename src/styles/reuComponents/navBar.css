@@ -1,0 +1,84 @@
+
+@import '../../variables.css';
+
+.nv-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background-color: var(--light-green);
+}
+
+.nv-back-to-users-btn{
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+.nv-back-arrow-icon{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.nv-bug-logo{
+    font-size: 2.5rem;
+    color: var(--white);
+}
+
+.nv-title{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.nv-btn-logout{
+    font-size: 1.6rem;
+    padding: .6rem 1.2rem;
+    border: 2px solid var(--white);
+    outline: none;
+    border-radius: .3rem;
+    cursor: pointer;
+    color: var(--dark-green);
+}
+
+
+@media (max-width: 600px) {
+    .nv-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem .5rem;
+        background-color: var(--light-green);
+    }
+    
+    .nv-back-arrow-icon{
+        font-size: 1.5rem;
+    }
+    
+    
+    .nv-bug-logo{
+        font-size: 1.8rem;
+    }
+    
+    .nv-title{
+        font-size: 2rem;
+        font-weight: 700;
+        display: none;
+    }
+    .nv-btn-logout{
+        background-color: azure;
+        font-size: 1.2rem;
+        padding: .4rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: .3rem;
+    }
+
+    .nv-back-to-users-btn{
+        display: block;
+    }
+
+    .nv-show-hide-button{
+        display: none;
+    }
+}

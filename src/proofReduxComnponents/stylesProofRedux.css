@@ -1,0 +1,21 @@
+
+.container{
+    display: flex;
+}
+
+.leftContainer{
+    height: 100vh;
+    width: 50%;
+    background-color: aqua;
+}
+
+.rightContainer{
+    height: 100vh;
+    width: 50%;
+    background-color: blueviolet;
+}
+
+.button-{
+    font-size: 2rem;
+    padding: 2rem;
+}

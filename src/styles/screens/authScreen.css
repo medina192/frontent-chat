@@ -1,0 +1,147 @@
+
+@import '../../variables.css';
+
+
+/* form */
+.con-form-auth{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 1rem;
+    background-color: var(--white)
+  }
+  
+
+.ls-auth-title{
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: var(--dark-green);
+}
+
+.con-icon-input{
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 1px groove #999999;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.con-input-aux-border{
+
+}
+
+.ls-input-login{
+    flex: 1;
+    border: none;
+    outline: none;
+    width: 30rem;
+    margin: 0 1rem;
+    padding: 1rem 0.5rem;
+    font-size: 1.8rem;
+    background-color: var(--white);
+    color: var(--dark-green);
+}
+
+.auth-icon-input{
+    color: var(--blue-green);
+    font-size: 5rem;
+    padding: 1rem;
+    border-right: 1px groove #999999;
+}
+
+.error-msg-input{
+    color: #ed2939;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+.con-remember-me{
+    display: flex;
+    align-items: center;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.check-remember{
+    font-size: 2rem;
+    background-color: red;
+}
+
+.ls-remember-me-text{
+    font-size: 1.4rem;
+    margin-left: 1rem;
+}
+
+
+.ls-button-login{
+    width: 100%;
+    font-size: 2.2rem;
+    font-weight: 700;
+    padding: 2rem 3rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    opacity: 1;
+    transition: opacity linear .5s;
+    background-color: var(--blue-green);
+    color: white;
+}
+
+.ls-button-login:hover{
+    opacity: 0.5;
+}
+
+
+
+@media (max-width: 500px) {
+    .con-form-auth{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: .5rem;
+        background-color: var(--white)
+    }
+
+    .ls-auth-title{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .ls-input-login{
+        width: 90%;
+    }
+
+    .ls-button-login{
+        width: 90%;
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding: 1rem 3rem;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+
+    .ls-input-login{
+        flex: 1;
+        border: none;
+        outline: none;
+        width: 16rem;
+        margin: 0 1rem;
+        padding: 1rem 0.5rem;
+        font-size: 1.8rem;
+        background-color: var(--white);
+        color: var(--dark-green);
+    }
+    
+    .auth-icon-input{
+        color: var(--blue-green);
+        font-size: 4rem;
+        padding: 1rem;
+        border-right: 1px groove #999999;
+    }
+}
