@@ -50,7 +50,6 @@ const NavBar = ({ socket }: any) => {
             showChatScreen: false}))
     }
 
-    console.log('first', firstLoad);
 
     return (
         <div className='nv-container'>

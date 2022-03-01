@@ -34,8 +34,8 @@ const ChatSide = ({socket, moveToChat, setMoveToChat}: any) => {
     }, [friendInfo.uid, chatMessages]);
     
 
-    const user = useSelector((state: RootState) => state.user, shallowEqual)
-    const dispatch = useAppDispatch()
+    const user = useSelector((state: RootState) => state.user, shallowEqual);
+
 
     const sendMessage = (e: any) => {
         e.preventDefault();
@@ -57,7 +57,14 @@ const ChatSide = ({socket, moveToChat, setMoveToChat}: any) => {
     socket?.on('add-msg-to-chat', (newMessage: any) => {
         (document.getElementById("form") as HTMLFormElement).reset();
         messageInput.current = '';
-        setMessages([...messages, newMessage]);
+        if((newMessage.from === friendInfo.uid  && newMessage.to === user.uid)
+            || (newMessage.to === friendInfo.uid  && newMessage.from === user.uid)
+        )
+        {
+            setMessages([...messages, newMessage]);
+        }
+
+
     })
 
 
@@ -90,6 +97,7 @@ const ChatSide = ({socket, moveToChat, setMoveToChat}: any) => {
         <div className={`cs-con-chat-side 
         ${ moveState.showUsersScreen ? 'move-to-users' : ''}
         ${moveState.showChatScreen ? 'move-to-chat' : ''}`}>
+            <p className='cs-friend-name'>{ friendInfo.name }</p>
             <div id="con-messages" className='cs-con-messages'>
                 {
                     messages.map((msg, index) => {

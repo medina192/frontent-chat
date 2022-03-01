@@ -27,11 +27,11 @@ const PrivateRoutes = () => {
     }
 
 
-    const { socket } = UseSocket('http://localhost:3001');
-
+    const { socket } = UseSocket('http://137.184.224.194:3001');
+    //const { socket } = UseSocket('http://localhost:3001');
 
     const removeUser = useCallback(() => {
-      generalCallApi('Post', 'api/auth/logout', {userId: user.uid})
+      generalCallApi('Post', '/api/auth/logout', {userId: user.uid})
     }, [user.uid]);
 
     useEffect(() => {

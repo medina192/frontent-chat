@@ -88,13 +88,31 @@
     outline: none;
     border: none;
     opacity: 1;
-    transition: opacity linear .5s;
+    transition: all linear .2s;
     background-color: var(--blue-green);
     color: white;
+    border: solid 1px white;
 }
 
 .ls-button-login:hover{
-    opacity: 0.5;
+    color: var(--blue-green);
+    border: solid 1px var(--blue-green);
+    background-color: white;
+}
+
+.ls-text-account{
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    color: var(--dark-green);
+}
+
+.ls-text-link-account{
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: rgb(28, 75, 46);
 }
 
 
@@ -105,7 +123,8 @@
         flex-direction: column;
         padding: 1rem;
         border-radius: .5rem;
-        background-color: var(--white)
+        background-color: var(--white);
+        max-width: 90vw;
     }
 
     .ls-auth-title{
@@ -113,6 +132,7 @@
         margin-bottom: 1rem;
     }
 
+    
     .ls-input-login{
         width: 90%;
     }
@@ -126,6 +146,7 @@
         cursor: pointer;
     }
 
+    /*
     .ls-input-login{
         flex: 1;
         border: none;
@@ -137,11 +158,20 @@
         background-color: var(--white);
         color: var(--dark-green);
     }
+    */
     
     .auth-icon-input{
         color: var(--blue-green);
         font-size: 4rem;
         padding: 1rem;
         border-right: 1px groove #999999;
+    }
+
+    .ls-text-account{
+        font-size: 1.5rem;
+    }
+    
+    .ls-text-link-account{
+        font-size: 1.5rem;
     }
 }

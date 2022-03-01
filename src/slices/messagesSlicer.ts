@@ -7,7 +7,7 @@ import { generalCallApi } from '../services/api/apiCalls';
 export const bringMessages = createAsyncThunk(
   'messages/bringMessages',
   async ({ uid, friendUid, friendName }: { uid: string, friendUid: string, friendName: string} ) => {
-    const response = await generalCallApi('Post','api/messages/bringFriendMessages',{
+    const response = await generalCallApi('Post','/api/messages/bringFriendMessages',{
       myUid: uid,
       friendUid
     });

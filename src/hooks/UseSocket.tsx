@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { RootState, useAppDispatch } from '../store/store';
 
 
-
+// http://localhost:3001
+// http://161.35.224.248:3001
 
 const connectSocketServer = () => {
     const socket = io("http://localhost:3001", {

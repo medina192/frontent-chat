@@ -64,7 +64,7 @@ const AppRoutes = () => {
             if(token)
             {
 
-                generalCallApi('Post', 'api/auth/authToken', {}, token)
+                generalCallApi('Post', '/api/auth/authToken', {}, token)
                 .then( ( data: any)  => {
                     const resp = data?.data;
 
@@ -77,7 +77,7 @@ const AppRoutes = () => {
                     
                 })
                 .catch(error => {
-                    console.log('error private', error.request.response);
+                    console.log('error private', error);
                     setCheckAuthFirstLoad(true);
                 })
             }

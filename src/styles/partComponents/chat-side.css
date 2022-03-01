@@ -59,6 +59,14 @@
     border: none;
 }
 
+.cs-friend-name{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-green);
+    padding: .5rem
+}
+
 @media (max-width: 600px) {
     .cs-con-chat-side{
         width: 100%;

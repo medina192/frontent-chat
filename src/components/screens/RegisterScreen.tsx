@@ -138,7 +138,7 @@ const RegisterScreen = () => {
         {}
         else{
 
-            generalCallApi('Post', 'api/auth/createuser', inputsData.current)
+            generalCallApi('Post', '/api/auth/createuser', inputsData.current)
             .then( data => {
                 const resp = data?.data;
                 localStorage.setItem('token-friend-chat', resp.token);
@@ -152,7 +152,7 @@ const RegisterScreen = () => {
             })
             .catch(error => {
 
-                const respError = JSON.parse( error.request.response);
+                const respError = JSON.parse( error.request);
 
                 if(respError.msg === 'The email already exists')
                 {
@@ -164,6 +164,10 @@ const RegisterScreen = () => {
             })
 
         }
+    }
+
+    const goToLogInScreen = () => {
+        navigate('/chat/auth/login')
     }
 
     return (
@@ -219,6 +223,9 @@ const RegisterScreen = () => {
                 <button onClick={ submitForm } className='ls-button-login'>
                     Register
                 </button>
+
+                <p className='ls-text-account'>Do you already have an account??</p>
+                <p onClick={ goToLogInScreen } className='ls-text-link-account'>Log In</p>
             </form>
         </div>
     )

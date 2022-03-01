@@ -25,6 +25,7 @@ const UsersSide = ({socket}: any) => {
 
     socket?.on('load-all-users', (newUsers: any) => {
 
+
         if (newUsers && !firstTime.current)
         {
             const usersFriends = newUsers.filter( (u: any) => u.uid !== user.uid);

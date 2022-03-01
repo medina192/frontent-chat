@@ -15,8 +15,6 @@ const LoginScreen = () => {
 
     const navigate = useNavigate();
 
-    const [rememberMe, setRememberMe] = useState(false);
-
     const inputsData = useRef({
         email: '',
         password: '',
@@ -122,7 +120,7 @@ const LoginScreen = () => {
         {}
         else{
 
-            generalCallApi('Post', 'api/auth/login', inputsData.current)
+            generalCallApi('Post', '/api/auth/login', inputsData.current)
             .then( data => {
                 const resp = data?.data;
                 localStorage.setItem('token-friend-chat', resp.token);
@@ -136,7 +134,8 @@ const LoginScreen = () => {
                 navigate('/')
             })
             .catch(error => {
-
+                console.log('erer', error.request)
+                
                 const respError = JSON.parse( error.request.response);
 
                 if(respError.msg === 'The Email is not register')
@@ -146,15 +145,21 @@ const LoginScreen = () => {
                         errorEmail: [respError.msg, true]
                     })
                 }
+                
             })
 
         }
     }
 
+
+    const goToRegisterScreen = () => {
+        navigate('/chat/auth/register')
+    }
+
     return (
         <div className='center-container expand-100-100 color-background'>
             <form className='con-form-auth' onSubmit={ submitForm }> 
-                <p className='ls-auth-title'>Inicia sesión</p>
+                <p className='ls-auth-title'>Log In</p>
                
 
                 <div className='con-icon-input'>
@@ -206,6 +211,8 @@ const LoginScreen = () => {
                 <button onClick={ submitForm } className='ls-button-login'>
                     Iniciar Sesión
                 </button>
+                <p className='ls-text-account'>You do not have an account?</p>
+                <p onClick={ goToRegisterScreen } className='ls-text-link-account'>Register Here¡</p>
             </form>
         </div>
     )

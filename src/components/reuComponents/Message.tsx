@@ -1,9 +1,10 @@
 import React from 'react';
-import '../../styles/reuComponents/message.css'
+import '../../styles/reuComponents/message.css';
+
+//"proxy": "http://161.35.224.248:3001",
 
 const Message = ({ msg, myMsg }: any) => {
 
-    console.log(msg.createdAt);
 
     const newDate = new Date(msg.createdAt);
 
